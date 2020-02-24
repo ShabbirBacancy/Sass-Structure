@@ -1,0 +1,45 @@
+
+.btn{
+    padding: 10px 26px;
+    &-sm{padding: 8px 22px;font-size: 14px;}
+    &-primary{
+        background-color: $color-primary;
+        border-color: $color-primary;
+            &:not(:disabled):not(.disabled):active,
+            &:not(:disabled):not(.disabled):active:focus,
+            &:not(:disabled):not(.disabled):focus {            
+            background-color: darken($color-primary,3%);
+            border-color: darken($color-primary,3%);                        
+        } 
+    }
+    &-primary:hover{
+        background-color: $color-primary2;
+        border-color: $color-primary2; 
+    }
+    &-secondary{                    
+            color: #666;
+            background-color: #eee;
+            border-color: #eee;            
+            &:not(:disabled):not(.disabled):active {
+                background-color:#dedede;
+                border-color:#dedede;
+                color: #666;                
+            }  
+            &:hover {
+                background-color:#dedede;
+                border-color:#dedede;
+                color: #555;                 
+            }        
+    }
+    &:not(:disabled):not(.disabled):active:focus,
+    &:not(:disabled):not(.disabled):focus {
+        box-shadow: none;
+    }
+
+}
+.btn-interaction-effect{
+    transition: 0.25s ease-in-out all;
+    &:active{
+        transform: scale(0.98);
+    } 
+}

@@ -1,0 +1,15 @@
+body{
+    font-weight: $font-normal;
+    font-family: $font-primary;    
+}
+body{
+    overflow-x: hidden;
+}
+
+header,footer,section{display: inline-block;width: 100%;float: left;}
+html,body {height: 100%;}
+button,a,.btn,label,input,
+button:focus,a:focus,.btn:focus,label:focus,input:focus
+{
+    outline:none !important
+}

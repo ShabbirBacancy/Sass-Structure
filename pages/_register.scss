@@ -1,0 +1,258 @@
+.bg-success2 {
+    background: #98c739 !important;
+    border-color: #98c739 !important;
+}
+
+.container2 {
+    padding: 0 3em;
+
+    @include respondMax(lg-desktop) {
+        padding: 0 1em;
+    }
+
+    @include respondMax(md-tab) {
+        padding: 0 .5em;
+    }
+
+    @include respondMax(sm-phone) {
+        padding: 0 .2em;
+    }
+}
+
+.border_new {
+    border: 1px solid #f0f0f0;
+}
+
+.center-box.register_box {
+    padding: 35px 32px;
+    max-width: 100%;
+
+    @include respondMax(lg-desktop) {
+        padding: 25px 20px;
+    }
+
+    .form-signin.small {
+        margin: 0;
+        padding: 30px 30px 5px;
+
+        .form-control {
+            font-size: 14px;
+        }
+
+        @include respondMax(lg-desktop) {
+            padding: 25px 20px 5px;
+
+            .form-group {
+                margin-bottom: 1.45em;
+            }
+
+            .form-control {
+                font-size: 12px;
+                padding: 10px 16px;
+            }
+        }
+    }
+}
+
+.input_right_portion {
+    flex:1;
+    max-width: none;
+    width: 100%;
+    @include respondMax(xl-desktop) {
+        flex:none;
+        max-width: 100%;
+    }
+    @include respondMax(md-tab) {
+        max-width: 100%;
+        flex: none;
+        margin-top: 10px;
+    }
+}
+
+.register_title {
+    background: #f2f8fb;
+    padding: 22px 30px;
+
+    .title_small {
+        font-size: 19px;
+        font-weight: 700;
+        margin: 0;
+        line-height: 1;
+    }
+
+    @include respondMax(lg-desktop) {
+        padding: 15px 20px;
+
+        .title_small {
+            font-size: 16px;
+            line-height: 1.4;
+        }
+
+    }
+}
+
+.center-box.register_box .login-section.p-0.border_new {
+    border-radius: 5px;
+}
+
+.hide_input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.c-b4b4b4 {
+    color: #b4b4b4;
+}
+
+.input_left_portion {
+    max-width: 250px;
+    flex: 1;
+    width: 100%;
+    >.custom_input_file{
+        padding: 0 !important;
+        height: 200px;
+        justify-content: center;
+        cursor: pointer;
+        .selected{
+            width: 100%;
+            object-fit: contain;
+            height: auto;
+            padding: 10px;
+        }
+    }
+    .icon_input {
+        height: 50px;        
+    }
+    @media(max-width:1600px){
+        max-width: 200px;
+        .custom_input_file{
+            height: 172px;
+        }
+        .icon_input {
+            height: 40px;
+        }
+        span{
+            font-size: 14px;
+        }
+    }
+
+    @include respondMax(xl-desktop) {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 15px;
+    }
+    @include respondMax(lg-desktop) {
+        max-width: 160px;
+        .custom_input_file{
+            height: 135px;
+        }
+        .icon_input {
+            height: 40px;
+        }
+
+        span {
+            font-size: 11px;
+        }
+    }
+    @include respondMax(md-tab) {
+        margin-bottom: 0;
+    }
+    @include respondMax(xs-phone) {
+        
+    }
+}
+.detail_block:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+@media(max-width:1366px) {
+
+    .register_left,
+    .register_right {
+        max-width: 100%;
+        width: 100%;
+        flex: none;
+    }
+
+    .register_left .logo {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0;
+    }
+
+    .register_left .logo hr,
+    .register_left .logo br {
+        display: none !important;
+    }
+
+
+    .register_left .logo {
+        h5 {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 0;
+            margin-top: 8px;
+
+            @include respondMax(md-tab) {
+                font-size: 16px;
+            }
+            
+            @include respondMax(sm-phone) {
+                font-size: 15px;
+            }
+        }
+        img{
+            height: 80px;
+            width: auto;
+            @include respondMax(md-tab) {height: 60px;}
+        }
+    }
+
+    .register_left {
+        margin-bottom: 30px;
+        .center-box {
+            padding: 28px 15px;
+        }
+        @include respondMax(md-tab) {
+            margin-bottom: 20px;
+            .center-box{
+                padding: 25px 14px !important;
+            }
+        }
+    }
+}
+
+.row.row3 {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.row3>.col,
+.row3>[class^='col'] {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.btn.btn_full {
+    padding: 14px 22px;
+
+    @include respondMax(lg-desktop) {
+        padding: 12px 20px;
+    }
+
+    @include respondMax(md-tab) {
+        padding: 10px 15px;
+    }
+}
+.input_right_portion .form-control.control-full {
+    @media (max-width:1600px){
+        font-size: 14px !important;        
+    }
+    @include respondMax(sm-phone){
+        font-size: 12px !important;        
+    }
+}
+                    

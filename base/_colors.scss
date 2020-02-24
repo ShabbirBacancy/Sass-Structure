@@ -1,0 +1,29 @@
+$color-white:#fff;
+$color-black:#212121;
+$color-primary:#03a9f4;
+$color-primary2:#00a0f4;
+$color-graylight:#888;
+$color-graydark:#555;
+$color-offwhite:#f5f5f5;
+$color-secondary:#aaa;
+$color-success:#55ff55;
+
+.text {
+    &-primary {color: $color-primary !important;}
+    &-primary2 {color: $color-primary2 !important;}
+    &-secondary {color: $color-secondary !important;}
+    &-white {
+        &-hov:hover{color:$color-white !important;}
+    }
+}
+
+.bg {
+    &-primary {background-color: $color-primary !important;
+        &-hov:hover {background-color: $color-primary !important;}
+    }
+    &-primary2 {background-color: $color-primary2 !important;}
+    &-offwhite {background-color: $color-offwhite;}
+    &-graylight {background-color: $color-graylight;}
+    &-graydark {background-color: $color-graydark;}
+    &-success {background-color: $color-success;}
+}

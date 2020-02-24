@@ -1,0 +1,200 @@
+.login_bg{
+    background: url("../images/login-bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100%;
+    color: #222222;
+    height: 100%;
+    font-family: 'Raleway', sans-serif;
+}
+.center-box {
+    max-width: 800px;
+    padding: 65px 15px 60px;
+    border-radius: 15px;
+
+    @media(max-width:1600px) {
+        max-width: 665px;
+        padding: 30px 15px;
+        .login-logo{
+            max-width: 210px;
+            &.comp_register{
+                border-right: none;
+                display: block;
+                max-width: 100%;
+                margin: auto;
+                h5{
+                    white-space: nowrap;;
+                    br{
+                        display: none !important;
+                    }
+                }
+                @include respondMax(xl-desktop) {
+                    .logo{width: auto;}
+                }
+            }
+        }
+        .form-signin .btn {
+            font-size: 16px !important;
+        }
+        .login-logo+div{
+            flex:1;
+            max-width: unset;
+        }
+    }   
+    @include respondMax(xl-desktop) {
+        max-width: 680px;
+        &.center2 {
+            max-width: 780px;
+        }
+    }
+    @include respondMax(lg-desktop) {
+        max-width: 650px;        
+        .login-logo{
+            max-width: 180px;
+        }
+    }
+    @include respondMax(md-tab) {
+        max-width: 400px;
+        padding: 30px 0px;
+        .login-logo{
+            margin-left: auto;
+            max-width: 100%;
+            margin-right: auto;
+        }
+    }
+
+    @include respondMax(sm-phone) {
+        padding: 30px 25px;
+    }
+
+    @include respondMax(sm-480) {
+        max-width: calc(100% - 40px);
+        width: 360px;
+        padding: 25px 18px;
+    }
+
+    @include respondMax(xs-phone) {
+        max-width: calc(100% - 40px);
+        width: 100%;
+    }
+}
+
+.border-gray {
+    border-right: #e4e4e4 solid 1px;
+    padding: 0px;
+}
+
+.login-section {
+    padding: 0px 40px;    
+}
+.form-signin .form-group {
+    margin-bottom: 1.4rem;
+}
+.login-section h2 {
+    font-size: 40px;
+    color: #98c739;
+    font-weight: 600;
+    @media(max-width: 1600px){
+        font-size: 34px;
+    }
+    span {
+        font-weight: 600;
+        font-size: 26px;
+        color: #222222;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    @include respondMax(xl-desktop) {
+        font-size: 32px;
+
+        span {
+            font-size: 24px;
+        }
+    }
+ 
+    @include respondMax(md-tab) {
+        font-size: 28px;
+
+        span {
+            font-size: 22px;
+        }
+    }
+    @include respondMax(sm-phone) {        
+        font-size: 24px;
+
+        span {
+            font-size: 22px;
+        }        
+    }
+}
+
+.border-gray .logo {
+    padding: 0px 32px;
+    img{        
+        @media(max-width:1600px){
+            width: 120px;
+        }
+        @include respondMax(xl-desktop){
+            width: 110px;
+        }
+        @include respondMax(lg-desktop){
+            width: 95px;
+        }
+        @include respondMax(md-tab){
+            width: 85px;
+        }
+        @include respondMax(sm-phone){
+            width: 80px;
+        }
+        @include respondMax(sm-480){
+            width: 75px;
+        }
+    }
+}
+
+.login-section p {
+    color: #a9a9a9;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.form-signin .form-control {
+    height: auto;
+    color: #222222;
+    font-weight: 600;
+    font-size: 17px;
+    padding: 13px 20px;
+
+    &::placeholder {
+        color: #a9a9a9;
+        font-weight: 500;
+    }
+
+    @media(max-width: 1600px){
+        font-size: 16px;
+    }
+}
+
+
+.form-signin .form-control {
+    border: #f0f0f0 solid 1px;
+}
+
+.form-signin .form-check {
+    &.custom-checkbox{cursor: pointer;}
+    margin-bottom: 10px;
+    .form-check-label {
+        color: #737373;
+        font-size: 16px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+    }
+}
+
+
+.op1-hover:hover>img{ 
+    opacity: 1 !important;
+}

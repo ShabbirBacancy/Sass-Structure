@@ -1,0 +1,27 @@
+.badge.upgraded {
+    background: #eee;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    font-weight: 500;
+    color: #666;
+    @include respondMax(lg-desktop){
+        width: 22px;
+        height: 22px;
+    }
+}
+
+.icon_res{
+    margin-right: 6px;
+    @include respondMax(lg-desktop){
+        width: 12px;
+    }
+}
+.bdr-md-none{
+    @include respondMax(lg-desktop){
+        border: none !important;
+    }
+}

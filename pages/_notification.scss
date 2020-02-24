@@ -1,0 +1,121 @@
+.notification-list {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    li {
+        list-style: none;
+        padding: 15px 0px;
+        display: flex;
+        align-items: center;
+        .user-pic-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            position: relative;
+            margin-right: 15px;
+            overflow: hidden;
+            img {
+                width: 60px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        .notification-text {
+            color: #000000;
+            width: calc(100% - 50px);
+            font-size: 15px;
+            font-weight: 600;
+            span {
+                color: #8e8e8e;
+                font-weight: 400;
+            }
+            .time-block {
+                color: #8e8e8e;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+.text-date {
+    border-right: #e4e4e4 solid 1px;
+    height: 100%;
+    color: #959595;
+    font-size: 15px;
+    @include respondMax(sm-phone) {
+        border-right: none;
+    }
+}
+
+.popupblock {
+    max-width: 500px;
+    margin: 7.7rem 60px;
+    float: right;
+    max-width: 800px;
+    width: 750px;
+    @include respondMax(lg-desktop) {
+        width: 100%;
+        width: 500px;
+    }
+}
+
+.bgnone {
+    background: none;
+    border: none;
+}
+
+.bg {
+    background: #fff;
+    padding: 0px 30px;
+    border-radius: 6px;
+    .modal-header {
+        padding: 1.2rem 0rem;
+        .modal-title {
+            font-weight: 700;
+            font-size: 18px;
+        }
+    }
+    .modal-body {
+        padding: 1rem 0px;
+    }
+}
+
+.close-btn {
+    width: 95px;
+    margin-bottom: 25px;
+    float: right;
+    margin-left: auto;
+}
+
+.notification-model-list {
+    margin: 0px;
+    padding: 0px;
+    li {
+        list-style: none;
+        margin: 0px;
+        text-align: left;
+        padding: 15px 0px;
+        .custom-control-label::before {
+            height: 17px;
+            width: 17px;
+            top: .15rem;
+        }
+        .custom-control-label::after {
+            height: 17px;
+            width: 17px;
+            top: .15rem;
+        }
+        .custom-checkbox .custom-control-label::before {
+            border-radius: 2px;
+        }
+        .custom-control-label {
+            cursor: pointer;
+            font-weight: 500;
+        }
+        .custom-control{            
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,180 @@
+// RADIO BUTTONS
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+  visibility: hidden !important;
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  line-height: 20px;
+  display: inline-block;
+  color: #000;
+  font-size: 14px;
+  margin-right: 10px;
+  visibility: visible;
+}
+
+[type="radio"]:checked:before,
+[type="radio"]:not(:checked):before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -4px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ddd;
+  border-radius: 100%;
+  background: #fff;
+  visibility: visible;
+}
+
+[type="radio"]:checked:after,
+[type="radio"]:not(:checked):after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: $color-primary;
+  position: absolute;
+  top: 2px;
+  left: 6px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  visibility: visible;
+}
+
+[type="radio"]:not(:checked):after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  visibility: visible;
+}
+
+[type="radio"]:checked:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  visibility: visible;
+}
+
+
+// CHECKBOXES
+
+.c__checkbox {
+  position: absolute; // take it out of document flow
+  opacity: 0; // hide it
+
+  &+label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  // Box.
+  &+label:before {
+    content: '';
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    border-radius: 0px;
+    transition: 0.3s all;
+    border: 1px solid #999;
+  }
+
+  // Box hover
+  &:hover+label:before {
+    background: rgba($color-primary, 0.3);
+    border-color: rgba($color-primary, 0.3);
+  }
+
+  // Box focus
+  &:focus+label:before {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+  }
+
+  // Box checked
+  &:checked+label:before {
+    background: $color-primary;
+  }
+
+  // Disabled state label.
+  &:disabled+label {
+    color: #b8b8b8;
+    cursor: auto;
+  }
+
+  // Disabled box.
+  &:disabled+label:before {
+    box-shadow: none;
+    background: #ddd;
+  }
+
+  // Checkmark. Could be replaced with an image
+  &:checked+label:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 11px;
+    background: white;
+    width: 2px;
+    height: 2px;
+    box-shadow:
+      2px 0 0 white,
+      4px 0 0 white,
+      4px -2px 0 white,
+      4px -4px 0 white,
+      4px -6px 0 white,
+      4px -8px 0 white;
+    transform: rotate(45deg);
+  }
+}
+
+.custom-checkbox {
+  .custom-control-label {
+    padding-left: 10px;
+    &::before {  
+      border-radius: 3px;
+      border-color: #e4e4e4;
+    }
+    &::before,&::after {
+      width: 1.3rem;
+      height: 1.3rem;
+      box-shadow: none !important;
+      top: 0.1rem;
+    }
+    &::after {
+      background: $color-primary;
+      transform: scale(0);
+      transition: .3s;
+    }
+  }
+  &.small_input{
+    min-height: auto;    
+    cursor: pointer;
+    .custom-control-label{
+      cursor: pointer;
+      padding-left: 0;
+      font-size: 12px;
+      &::before,&::after {
+        width: 1rem;
+        border-radius: 2px;
+        height: 1rem;
+      }
+    }
+  }
+  .custom-control-input:checked~.custom-control-label::before {
+    background: #fff;
+    border-color: #e4e4e4;
+  }
+  
+  .custom-control-input:checked~.custom-control-label::after {
+    background: $color-primary;
+    transform: scale(0.5);
+  }  
+}
