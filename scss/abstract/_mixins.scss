@@ -1,0 +1,190 @@
+$xs-phone: 360px;
+$sm-phone: 480px;
+$md-phone: 575px;
+$lg-phone: 767px;
+
+$md-tablet: 991px;
+$lg-tablet: 1023px;
+
+$sm-desktop: 1199px;
+$md-desktop: 1679px;
+$lg-desktop: 1919px;
+
+@mixin respondMax($breakpoint) {
+  @if $breakpoint == xs-phone {
+    @media (max-width: $xs-phone) {
+      @content;
+    }
+  }
+  @if $breakpoint == sm-phone {
+    @media (max-width: $sm-phone) {
+      @content;
+    }
+  }
+  @if $breakpoint == md-phone {
+    @media (max-width: $md-phone) {
+      @content;
+    }
+  }
+  @if $breakpoint == lg-phone {
+    @media (max-width: $lg-phone) {
+      @content;
+    }
+  }
+  @if $breakpoint == md-tablet {
+    @media (max-width: $md-tablet) {
+      @content;
+    }
+  }
+  @if $breakpoint == lg-tablet {
+    @media (max-width: $lg-tablet) {
+      @content;
+    }
+  }
+  @if $breakpoint == sm-desktop {
+    @media (max-width: $sm-desktop) {
+      @content;
+    }
+  }
+  @if $breakpoint == md-desktop {
+    @media (max-width: $md-desktop) {
+      @content;
+    }
+  }
+  @if $breakpoint == lg-desktop {
+    @media (max-width: $lg-desktop) {
+      @content;
+    }
+  }
+}
+
+@mixin respondMin($breakpoint) {
+  @if $breakpoint == xs-phone {
+    @media (min-width: $xs-phone + 1) {
+      @content;
+    }
+  }
+  @if $breakpoint == sm-phone {
+    @media (min-width: $sm-phone + 1) {
+      @content;
+    }
+  }
+  @if $breakpoint == md-phone {
+    @media (min-width: $md-phone + 1) {
+      @content;
+    }
+  }
+  @if $breakpoint == lg-phone {
+    @media (min-width: $lg-phone + 1) {
+      @content;
+    }
+  }
+  @if $breakpoint == md-tablet {
+    @media (min-width: $md-tablet + 1) {
+      @content;
+    }
+  }
+  @if $breakpoint == lg-tablet {
+    @media (min-width: $lg-tablet + 1) {
+      @content;
+    }
+  }
+  @if $breakpoint == sm-desktop {
+    @media (min-width: $sm-desktop + 1) {
+      @content;
+    }
+  }
+  @if $breakpoint == md-desktop {
+    @media (min-width: $md-desktop + 1) {
+      @content;
+    }
+  }
+  @if $breakpoint == lg-desktop {
+    @media (min-width: $lg-desktop + 1) {
+      @content;
+    }
+  }
+}
+
+@mixin content-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+@mixin scrollbars(
+  $size,
+  $foreground-color,
+  $background-color: mix($foreground-color, white, 50%)
+) {
+  // For Google Chrome
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+
+  // For Internet Explorer
+  & {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+  // For Mozilla Firefox
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: "") {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+@mixin css-triangle(
+  $color,
+  $direction,
+  $size: 6px,
+  $position: absolute,
+  $round: false
+) {
+  @include pseudo($pos: $position);
+  width: 0;
+  height: 0;
+  @if $round {
+    border-radius: 3px;
+  }
+  @if $direction == down {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-top: $size solid $color;
+    margin-top: 0 - round($size / 2.5);
+  } @else if $direction == up {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-bottom: $size solid $color;
+    margin-bottom: 0 - round($size / 2.5);
+  } @else if $direction == right {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-left: $size solid $color;
+    margin-right: -$size;
+  } @else if $direction == left {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-right: $size solid $color;
+    margin-left: -$size;
+  }
+}
+
+@mixin truncate($truncation-boundary) {
+  max-width: $truncation-boundary;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

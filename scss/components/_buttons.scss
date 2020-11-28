@@ -1,0 +1,71 @@
+.btn {
+  padding: 8px 22px;
+  line-height: 1.5;
+  font-size: 16px;
+  font-weight: $font-semibold;
+  &-sm {
+    padding: 6px 18px;
+    font-size: 14px;
+  }
+  &-lg {
+    padding: 10px 26px;
+    font-size: 18px;
+  }
+  &-primary {
+    background-color: $color-primary;
+    border-color: $color-primary;
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled):active:focus,
+    &:not(:disabled):not(.disabled):focus {
+      background-color: darken($color-primary, 4%);
+      border-color: darken($color-primary, 4%);
+    }
+  }
+  &-primary:hover {
+    background-color: darken($color-primary, 2%);
+    border-color: darken($color-primary, 2%);
+  }
+  &-secondary {
+    color: $color-secondary;
+    background-color: $color-graylight;
+    border-color: $color-graylight;
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled):active:focus,
+    &:not(:disabled):not(.disabled):focus {
+      background-color: darken($color-graylight, 4%);
+      border-color: darken($color-graylight, 4%);
+      color: $color-secondary;
+    }
+    &:hover {
+      background-color: darken($color-graylight, 2%);
+      color: $color-secondary;
+      border-color: darken($color-graylight, 2%);
+    }
+  }
+  &-dark {
+    color: $color-white;
+    background-color: $color-secondary;
+    border-color: $color-secondary;
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled):active:focus,
+    &:not(:disabled):not(.disabled):focus {
+      background-color: darken($color-black, 4%);
+      border-color: darken($color-black, 4%);
+    }
+    &:hover {
+      background-color: darken($color-black, 2%);
+      color: $color-white;
+      border-color: darken($color-black, 2%);
+    }
+  }
+  &:not(:disabled):not(.disabled):active:focus,
+  &:not(:disabled):not(.disabled):focus {
+    box-shadow: none;
+  }
+}
+.btn-interaction-effect {
+  transition: 0.25s ease-in-out all;
+  &:active {
+    transform: scale(0.98);
+  }
+}

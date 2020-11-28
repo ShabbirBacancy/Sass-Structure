@@ -1,0 +1,65 @@
+.bg {
+  &-primary {
+    background-color: #03a9f4 !important;
+  }
+  &-secondary {
+    background-color: #03a9f4 !important;
+  }
+  &-secondary {
+    background-color: #03a9f4 !important;
+  }
+}
+// .bg-primary{}
+
+.row2 {
+  margin-left: -8px;
+  margin-right: -8px;
+  > .col,
+  > [class^="col"] {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+.cursor-pointer:hover {
+  cursor: pointer;
+}
+.smooth {
+  transition: 0.25s all ease-in-out;
+}
+a,
+a:hover {
+  text-decoration: none;
+}
+.lh-1 {
+  line-height: 1 !important;
+}
+.text-underline {
+  text-decoration: underline;
+  &-hove:hover {
+    text-decoration: underline;
+  }
+}
+.nowrap_text {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.object-contain {
+  object-fit: contain;
+}
+
+.hide-scroll {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  scrollbar-width: none;
+}
+
+.cursor-text {
+  cursor: text !important;
+}
+.cursor-notallowed {
+  cursor: not-allowed !important;
+}
+.cursor-pointer {
+  cursor: pointer !important;
+}

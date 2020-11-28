@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HOME</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 py-5">
+                <div class="bg-primary text-white p-4">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam officiis, laboriosam unde animi
+                    corporis veniam, tenetur cupiditate, quasi reprehenderit pariatur odio dignissimos est itaque nemo
+                    ducimus. Eligendi iure earum officia.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

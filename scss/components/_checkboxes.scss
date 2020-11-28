@@ -1,0 +1,93 @@
+.custom-control {
+  cursor: pointer;
+  margin-bottom: 0;
+  font-weight: $font-semibold;
+  &.custom-radio,
+  &.custom-checkbox {
+    padding-left: 34px;
+    display: flex;
+    align-items: center;
+    .custom-control-label {
+      line-height: 24px;
+      &:before,
+      &:after {
+        border-radius: 0;
+        width: 22px;
+        top: 0;
+        height: 22px;
+        left: -34px;
+        border-color: $color-graylight;
+      }
+      &:after {
+        transform: scale(0.7);
+        opacity: 0;
+        transition: 0.3s;
+      }
+    }
+  }
+  &.custom-checkbox {
+    .custom-control-input {
+      &:active {
+        & ~ .custom-control-label {
+          &::before {
+            background: rgba($color-primary, 0.1);
+            border-color: rgba($color-primary, 0.1);
+          }
+        }
+      }
+      &:focus {
+        & ~ .custom-control-label {
+          &::before {
+            box-shadow: none;
+            border-color: rgba($color-primary, 0.1);
+          }
+        }
+      }
+      &:checked {
+        & ~ .custom-control-label {
+          &::before {
+            background-color: $color-white;
+            border-color: darken($color-graylight, 2%);
+          }
+          &::after {
+            background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2303a2ea' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26l2.974 2.99L8 2.193z'/%3e%3c/svg%3e")
+              no-repeat center center/12px;
+            opacity: 1;
+            transform: scale(1);
+          }
+        }
+      }
+    }
+  }
+  &.custom-radio {
+    .custom-control-input {
+      &:focus {
+        & ~ .custom-control-label {
+          &::before {
+            box-shadow: none;
+            border-color: rgba($color-primary, 0.1);
+          }
+        }
+      }
+      &:checked {
+        & ~ .custom-control-label {
+          &::before {
+            border-color: $color-primary;
+            background: none;
+          }
+          &::after {
+            opacity: 1;
+            transform: scale(0.56);
+            background: $color-primary;
+          }
+        }
+      }
+    }
+    .custom-control-label {
+      &::before,
+      &::after {
+        border-radius: 50%;
+      }
+    }
+  }
+}

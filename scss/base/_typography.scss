@@ -1,0 +1,57 @@
+.fw {
+  &-normal {
+    font-weight: $font-normal !important;
+  }
+  &-medium {
+    font-weight: $font-medium !important;
+  }
+  &-semibold {
+    font-weight: $font-semibold !important;
+  }
+  &-bold {
+    font-weight: $font-bold !important;
+  }
+}
+h1 {
+  font-size: 42px;
+}
+h2 {
+  font-size: 34px;
+}
+h3 {
+  font-size: 28px;
+}
+h4 {
+  font-size: 22px;
+}
+h5 {
+  font-size: 18px;
+}
+h6 {
+  font-size: 16px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $font-medium;
+  line-height: 1.5;
+  color: $color-black;
+}
+p {
+  font-size: 16px;
+  color: $color-secondary;
+}
+.text {
+  &-black {
+    color: $color-black;
+  }
+  &-primary {
+    color: $color-primary;
+  }
+  &-gray {
+    color: $color-gray;
+  }
+}
